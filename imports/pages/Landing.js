@@ -4,12 +4,22 @@ export default class Landing extends Component {
 
     state = {
         title: "Chris Blog",
-        description: "Le Blog de Chris"
+        description: "Le Blog de Chris",
+        age: 27
     }
 
-    render(){
-        const { title, description } = this.state
+    birthday = () => this.setState({age: this.state.age + 1})
 
-        return <p>{title} {description}</p>
+    render(){
+        const { title, description, age } = this.state
+
+        return(
+            <div>
+                <h1>{title}</h1>
+                <p>{description}</p>
+                <p>Chris est un jeune développeur de {age} ans</p>
+                <button onClick={this.birthday}>Joyeux anniversaire !</button>
+            </div>
+        )
     }
 }
