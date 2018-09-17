@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Navbar from '/imports/components/Navbar'
+import { Button, Icon } from 'semantic-ui-react'
 
 export default class Landing extends Component {
 
@@ -15,19 +17,26 @@ export default class Landing extends Component {
     })
 
     render(){
-        const { title, description, age } = this.state
+        const { title, description, age, navbar_color, navbar_background, navbar_height } = this.state
         const { color = "red"} = this.props
 
         return(
             <div>
+                <Navbar 
+                    color={navbar_color} 
+                    backgroundColor={navbar_background} 
+                    height={navbar_height} />
                 <h1 style={{color: color}}>{title}</h1>
                 <p>{description}</p>
                 <p>Chris est un jeune développeur de {age} ans</p>
-                <button onClick={this.birthday}>Joyeux anniversaire !</button>
+                <Button inverted color='orange' onClick={this.birthday}><Icon name="user"/>Joyeux anniversaire !</Button>
                 <form>
                     <input type="text" name="title" value={title} onChange={this.handleChange} />
                     <input type="text" name="description" value={description} onChange={this.handleChange} />
                     <input type="number" name="age" value={age} onChange={this.handleChange} />
+                    <input placeholder="navbar_color" type="text" name="navbar_color" value={navbar_color} onChange={this.handleChange} />
+                    <input placeholder="navbar_background" type="text" name="navbar_background" value={navbar_background} onChange={this.handleChange} />
+                    <input placeholder="navbar_height" type="text" name="navbar_height" value={navbar_height} onChange={this.handleChange} />
                 </form>
             </div>
         )
