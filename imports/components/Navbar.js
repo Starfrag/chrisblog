@@ -1,19 +1,25 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Segment } from 'semantic-ui-react'
 
 export default class Navbar extends Component {
 
-    state = { activeItem: 'home' }
-  
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  
-    render() {
-      const { activeItem } = this.state
-  
-      return (
-        <div className="navbar">
-          <Menu pointing secondary>
-            <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+  state = {
+    activeItem: 'home'
+  }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <nav>
+        <Segment inverted className='navbar'>
+          <Menu inverted pointing secondary>
+            <Menu.Item
+              name='home'
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick} />
             <Menu.Item
               name='messages'
               active={activeItem === 'messages'}
@@ -26,14 +32,14 @@ export default class Navbar extends Component {
             />
             <Menu.Menu position='right'>
               <Menu.Item
-                name='logout'
-                active={activeItem === 'logout'}
+                name='log out'
+                active={activeItem === 'log out'}
                 onClick={this.handleItemClick}
               />
             </Menu.Menu>
           </Menu>
-
-        </div>
-      )
-    }
+        </Segment>
+      </nav>
+    )
   }
+}

@@ -7,7 +7,7 @@ import 'semantic-ui-css/semantic.min.css';
 
 Meteor.startup(() => {
     ReactDOM.render(
-        <Landing color="blue"/>,
+        <Landing />,
         document.getElementById('root')
     )
     console.log('CLIENT: LAUNCH')
