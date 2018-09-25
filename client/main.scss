@@ -8,8 +8,9 @@ body {
 
 .headerFluid{
     background-color: #1B1C1D;
+    position: relative;
     height: 30vw;
-    padding-top: 6vw;
+    padding-top: 5vw;
 
     .icon {
         color: white;
@@ -18,4 +19,12 @@ body {
     .content {
         color: white;
     }
+}
+
+.footerFluid{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: #1B1C1D;
+    height: 15%;
 }
