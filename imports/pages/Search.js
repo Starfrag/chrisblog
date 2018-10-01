@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import Navbar from '/imports/components/Navbar'
-import FormContent from '/imports/components/FormContent'
 import Footer from '/imports/components/Footer'
 
-export default class Form extends Component {
+export default class Search extends Component {
 
     state = {
 
@@ -14,7 +13,6 @@ export default class Form extends Component {
         return (
             <div>
                 <Navbar />
-                <FormContent />
                 <Footer />
             </div>
         )

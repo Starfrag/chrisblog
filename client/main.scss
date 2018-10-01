@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    height: 100%;
 }
 
 .navbar {
@@ -21,15 +22,20 @@ body {
     }
 }
 
-.LandingContent_1 {
+.landingContent_1 {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.formContent_1 {
     margin-top: 3vw;
     margin-bottom: 3vw;
 }
 
 .footerFluid{
     color: white;
-    position: relative;
+    position: absolute;
     bottom: 0;
     background-color: #1B1C1D;
-    height: 7vw;
+    height: 10%;
 }

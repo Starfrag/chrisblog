@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Grid } from 'semantic-ui-react'
 
 const LandingContent = () => (
-    <Container textAlign='center' className='LandingContent_1'>
+    <Container textAlign='center' className='landingContent_1'>
         <Grid divided='vertically'>
             <Grid.Row columns={1}>
                 <Grid.Column>
