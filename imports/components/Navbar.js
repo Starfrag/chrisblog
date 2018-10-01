@@ -1,23 +1,10 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Dropdown, Button, Text, View } from 'semantic-ui-react'
+import { Menu, Segment, Dropdown, Button } from 'semantic-ui-react'
 
 export default class Navbar extends Component {
 
-  // TODO Modification du bouton selon le status connecté/déconnecté
-
-  constructor() {
-    super();
-    this.state = {
-      textValue: 'Se connecter',
-      activeItem: 'Accueil'
-    }
-    this.onPressButton = this.onPressButton.bind(this);
-  }
-
-  onPressButton() {
-    this.setState({
-      textValue: 'Se déconnecter'
-    })
+  state = {
+    activeItem: 'Accueil'
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -59,16 +46,12 @@ export default class Navbar extends Component {
                 <Dropdown.Item>Créer un compte</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-
+            
             <Menu.Menu position='right'>
               <Button
-                title='Change Text'
-                text={this.state.textValue}
-                onPress={this.onPressButton}
-                inverted color='red'
-              // name='Se connecter'
-              // active={activeItem === 'Se connecter'}
-              // onClick={this.handleItemClick}
+                name='Se déconnecter'
+                active={activeItem === 'Se déconnecter'}
+                onClick={this.handleItemClick}
               />
             </Menu.Menu>
 
