@@ -31,9 +31,10 @@ class FormContentAddUser extends Component {
                         <Form.Input label='Téléphone Fixe' placeholder='Téléphone Fixe' width={3} />
                         <Form.Input label='Téléphone Portable' placeholder='Téléphone Portable' width={3} required />
                     </Form.Group>
+                    {/* TODO Check password */}
                     <Form.Group widths='equal'>
-                        <Form.Input label='Mot de Passe' type='password' required />
-                        <Form.Input label='Confirmer le Mot de Passe' type='password' required />
+                        <Form.Input label='Mot de passe' type='password' required />
+                        <Form.Input label='Confirmation du mot de passe' type='password' required />
                     </Form.Group>
                     <Form.TextArea label='Présentation' placeholder='Présentez-vous en quelques lignes...' />
                     <Form.Checkbox label="J'accepte les conditions d'utilisation" required />

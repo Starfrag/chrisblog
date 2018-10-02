@@ -24,15 +24,16 @@ class FormContentAddAssos extends Component {
                     <Form.Group>
                         <Form.Input label="Complément d'adresse" placeholder="Complément d'adresse" width={16} />
                     </Form.Group>
-                    {/* TODO Country Picker */}
+                    {/* TODO Country Picker (si les assos peuvent être étrangères...)*/}
                     <Form.Group>
-                        <Form.Input label='Email' placeholder='joe@schmoe.com' width={10} required />
+                        <Form.Input label='Email de contact' placeholder='joe@schmoe.com' width={10} required />
                         <Form.Input label='Téléphone Fixe' placeholder='Téléphone Fixe' width={3} />
                         <Form.Input label='Téléphone Portable' placeholder='Téléphone Portable' width={3} required />
                     </Form.Group>
+                    {/* TODO Check password */}
                     <Form.Group widths='equal'>
-                        <Form.Input label='Mot de Passe' type='password' required />
-                        <Form.Input label='Confirmer le Mot de Passe' type='password' required />
+                        <Form.Input label='Mot de passe' type='password' required />
+                        <Form.Input label='Confirmation du mot de passe' type='password' required />
                     </Form.Group>
                     <Form.TextArea label='Présentation' placeholder="Présentez l'association en quelques lignes..." />
                     <Form.Checkbox label="J'accepte les conditions d'utilisation" required />

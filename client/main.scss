@@ -3,9 +3,18 @@ body {
     height: 100%;
 }
 
-.navbar {
-    border-radius: 0px !important;
+// Navbar Start
+
+.ui.stackable.menu {
+    background-color: skyblue;
+    border: 0;
+
+    .ui.dropdown {
+        color: white;
+    }
 }
+
+// Header Start
 
 .headerFluid {
     background-color: #1B1C1D;
@@ -26,6 +35,8 @@ body {
     margin-top: 2vw;
 }
 
+// Content Start
+
 .landingContent_1 {
     margin-top: 3vw;
     margin-bottom: 3vw;
@@ -36,11 +47,13 @@ body {
     margin-bottom: 3vw;
 }
 
+// Footer Start
+
 .footerFluid{
-    color: white;
+    color: black;
     position: absolute;
     bottom: 0;
     margin-top: 10%;
-    background-color: #1B1C1D;
+    background-color: skyblue;
     height: 10%;
 }

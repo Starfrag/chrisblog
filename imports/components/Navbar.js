@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Dropdown, Button } from 'semantic-ui-react'
+import { Menu, Dropdown, Button } from 'semantic-ui-react'
 
 export default class Navbar extends Component {
 
@@ -13,51 +13,47 @@ export default class Navbar extends Component {
     const { activeItem } = this.state
 
     return (
-      <nav>
-        <Segment inverted className='navbar'>
-          <Menu inverted pointing secondary>
+      <Menu stackable>
 
-            <Menu.Item
-              name='Accueil'
-              active={activeItem === 'Accueil'}
-              onClick={this.handleItemClick}
-            />
+        <Menu.Item
+          name='Accueil'
+          active={activeItem === 'Accueil'}
+          onClick={this.handleItemClick}
+        />
 
-            {/* TODO - Ajouter handleItemClick sur les sous-menus/Dropdowns */}
+        {/* TODO - Ajouter handleItemClick sur les sous-menus/Dropdowns */}
 
-            <Dropdown text='Association' pointing className='link item'
-              name='Association'
-              active={activeItem === 'Association'}
-              onClick={this.handleItemClick}
-            >
-              <Dropdown.Menu>
-                <Dropdown.Item>Trouver une association</Dropdown.Item>
-                <Dropdown.Item>Hidden(Ajouter mon association)</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+        <Dropdown text='Association' pointing className='link item'
+          name='Association'
+          active={activeItem === 'Association'}
+          onClick={this.handleItemClick}
+        >
+          <Dropdown.Menu>
+            <Dropdown.Item>Trouver une association</Dropdown.Item>
+            <Dropdown.Item>Hidden(Ajouter mon association)</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
 
-            <Dropdown text='Mon Compte' pointing className='link item'
-              name='Mon Compte'
-              active={activeItem === 'Mon Compte'}
-              onClick={this.handleItemClick}
-            >
-              <Dropdown.Menu>
-                <Dropdown.Item>Hidden(Consulter mon profil)</Dropdown.Item>
-                <Dropdown.Item>Créer un compte</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            
-            <Menu.Menu position='right'>
-              <Button
-                name='Se déconnecter'
-                active={activeItem === 'Se déconnecter'}
-                onClick={this.handleItemClick}
-              />
-            </Menu.Menu>
+        <Dropdown text='Mon Compte' pointing className='link item'
+          name='Mon Compte'
+          active={activeItem === 'Mon Compte'}
+          onClick={this.handleItemClick}
+        >
+          <Dropdown.Menu>
+            <Dropdown.Item>Hidden(Consulter mon profil)</Dropdown.Item>
+            <Dropdown.Item>Créer un compte</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
 
-          </Menu>
-        </Segment>
-      </nav>
+        <Menu.Item position='right'>
+          <Button primary>Sign up</Button>
+        </Menu.Item>
+
+        <Menu.Item>
+          <Button>Log-in</Button>
+        </Menu.Item>
+
+      </Menu>
     )
   }
 }
