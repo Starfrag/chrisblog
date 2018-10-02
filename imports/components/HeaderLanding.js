@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Header, Image, Icon } from 'semantic-ui-react'
 
-const ContainerHeader = () => (
+const HeaderLanding = () => (
   <Container fluid textAlign='center' className='headerFluid'>
     <div>
       <Header as='h2' icon textAlign='center'>
@@ -13,4 +13,4 @@ const ContainerHeader = () => (
   </Container>
 )
 
-export default ContainerHeader
+export default HeaderLanding

@@ -7,7 +7,7 @@ body {
     border-radius: 0px !important;
 }
 
-.headerFluid{
+.headerFluid {
     background-color: #1B1C1D;
     position: relative;
     height: 30vw;
@@ -20,6 +20,10 @@ body {
     .content {
         color: white;
     }
+}
+
+.headerForm {
+    margin-top: 2vw;
 }
 
 .landingContent_1 {
@@ -36,6 +40,7 @@ body {
     color: white;
     position: absolute;
     bottom: 0;
+    margin-top: 10%;
     background-color: #1B1C1D;
     height: 10%;
 }

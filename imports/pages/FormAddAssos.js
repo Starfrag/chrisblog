@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import Navbar from '/imports/components/Navbar'
-import FormContent from '/imports/components/FormContent'
+import HeaderForm from '/imports/components/HeaderForm'
+import FormContentAddAssos from '/imports/components/FormContentAddAssos'
 import Footer from '/imports/components/Footer'
 
-export default class Form extends Component {
+export default class FormAddAssos extends Component {
 
     state = {
 
@@ -14,7 +15,8 @@ export default class Form extends Component {
         return (
             <div>
                 <Navbar />
-                <FormContent />
+                <HeaderForm />
+                <FormContentAddAssos />
                 <Footer />
             </div>
         )

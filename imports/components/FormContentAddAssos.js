@@ -1,0 +1,46 @@
+import React, { Component } from 'react'
+import { Form, Container } from 'semantic-ui-react'
+
+class FormContentAddAssos extends Component {
+
+    state = {
+        
+    }
+
+    handleChange = (e, { value }) => this.setState({ value })
+
+    render() {
+
+        return (
+            <Container className='formContent_1'>
+                <Form>
+                    <Form.Group>
+                        <Form.Input label="Nom de l'association" placeholder="Nom de l'association" width={16} required />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Input label="Adresse de l'association" placeholder="Adresse de l'association" width={14} required />
+                        <Form.Input label='Code Postal' placeholder='Code Postal' width={2} required />
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Input label="Complément d'adresse" placeholder="Complément d'adresse" width={16} />
+                    </Form.Group>
+                    {/* TODO Country Picker */}
+                    <Form.Group>
+                        <Form.Input label='Email' placeholder='joe@schmoe.com' width={10} required />
+                        <Form.Input label='Téléphone Fixe' placeholder='Téléphone Fixe' width={3} />
+                        <Form.Input label='Téléphone Portable' placeholder='Téléphone Portable' width={3} required />
+                    </Form.Group>
+                    <Form.Group widths='equal'>
+                        <Form.Input label='Mot de Passe' type='password' required />
+                        <Form.Input label='Confirmer le Mot de Passe' type='password' required />
+                    </Form.Group>
+                    <Form.TextArea label='Présentation' placeholder="Présentez l'association en quelques lignes..." />
+                    <Form.Checkbox label="J'accepte les conditions d'utilisation" required />
+                    <Form.Button>Submit</Form.Button>
+                </Form>
+            </Container>
+        )
+    }
+}
+
+export default FormContentAddAssos

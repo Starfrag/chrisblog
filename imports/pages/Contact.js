@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import Navbar from '/imports/components/Navbar'
-import HeaderLanding from '/imports/components/HeaderLanding'
-import ContentLanding from '/imports/components/ContentLanding'
 import Footer from '/imports/components/Footer'
 
-export default class Landing extends Component {
+export default class Contact extends Component {
 
     state = {
 
@@ -15,8 +13,6 @@ export default class Landing extends Component {
         return (
             <div>
                 <Navbar />
-                <HeaderLanding />
-                <ContentLanding />
                 <Footer />
             </div>
         )
