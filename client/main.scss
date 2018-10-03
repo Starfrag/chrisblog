@@ -6,18 +6,22 @@ body {
 // Navbar Start
 
 .ui.stackable.menu {
-    background-color: skyblue;
-    border: 0;
+    background-color: #96a5b2;
+    margin: 0;
 
     .ui.dropdown {
         color: white;
+    }
+
+    .ui.active.item {
+        color: black;
     }
 }
 
 // Header Start
 
 .headerFluid {
-    background-color: #1B1C1D;
+    background-color: #96a5b2;
     position: relative;
     height: 30vw;
     padding-top: 5vw;
@@ -38,8 +42,7 @@ body {
 // Content Start
 
 .landingContent_1 {
-    margin-top: 3vw;
-    margin-bottom: 3vw;
+    margin-top: 5vw;
 }
 
 .formContent_1 {
@@ -50,10 +53,14 @@ body {
 // Footer Start
 
 .footerFluid{
-    color: black;
-    position: absolute;
+    color: white;
+    position: relative;
     bottom: 0;
     margin-top: 10%;
-    background-color: skyblue;
-    height: 10%;
+    background-color: #96a5b2;
+    height: 7vw;
+
+    .rowFooter {
+        margin-top: 10px;
+    }
 }

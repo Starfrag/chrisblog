@@ -45,12 +45,9 @@ export default class Navbar extends Component {
           </Dropdown.Menu>
         </Dropdown>
 
+        {/* TODO Changer le bouton deconnexion en connexion si VISITEUR */}
         <Menu.Item position='right'>
-          <Button primary>Sign up</Button>
-        </Menu.Item>
-
-        <Menu.Item>
-          <Button>Log-in</Button>
+          <Button compact color='red'>Deconnexion</Button>
         </Menu.Item>
 
       </Menu>

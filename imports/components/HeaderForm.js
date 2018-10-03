@@ -5,7 +5,7 @@ const HeaderForm = () => (
   <Container fluid textAlign='center' className='headerForm'>
     <div>
       <Header as='h2' icon textAlign='center'>
-        <Header.Content className='content'>Association-1901</Header.Content>
+        <Header.Content className='content'>Associations-1901</Header.Content>
       </Header>
     </div>
   </Container>
