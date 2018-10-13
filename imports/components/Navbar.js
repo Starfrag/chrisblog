@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Menu, Dropdown, Button } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 export default class Navbar extends Component {
 
@@ -14,48 +14,39 @@ export default class Navbar extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu stackable>
-
-        <Link to="/">
-          <Menu.Item
-            name='Accueil'
-            active={activeItem === 'Accueil'}
-            onClick={this.handleItemClick}
-          />
-        </Link>
-
-        {/* TODO - Ajouter handleItemClick sur les sous-menus/Dropdowns */}
-
-        <Dropdown text='Association' pointing className='link item'
-          name='Association'
-          active={activeItem === 'Association'}
-          onClick={this.handleItemClick}
-        >
-          <Dropdown.Menu>
-            <Dropdown.Item>Trouver une association</Dropdown.Item>
-            <Link to="/assos/add">
-              <Dropdown.Item>Hidden(Ajouter mon association)</Dropdown.Item>
-            </Link>
-          </Dropdown.Menu>
-        </Dropdown>
-
-        <Dropdown text='Mon Compte' pointing className='link item'
-          name='Mon Compte'
-          active={activeItem === 'Mon Compte'}
-          onClick={this.handleItemClick}
-        >
-          <Dropdown.Menu>
-            <Dropdown.Item>Hidden(Consulter mon profil)</Dropdown.Item>
-            <Dropdown.Item>Créer un compte</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-
-        {/* TODO Changer le bouton deconnexion en connexion si VISITEUR */}
-        <Menu.Item position='right'>
-          <Button compact color='red'>Deconnexion</Button>
-        </Menu.Item>
-
-      </Menu>
+      <MainContainer>
+        <MenuItem bold to="/">
+            Accueil
+        </MenuItem>
+        <MenuItem to="/assos">
+            Associations
+        </MenuItem>
+        <MenuItem to="/contact">
+            Contact
+        </MenuItem>
+      </MainContainer>
     )
   }
 }
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  height: 5em;
+  border-bottom: 1px solid #ececec;
+`
+
+const MenuItem = styled(Link)`
+  height: 100%;
+  background-color: #ececec;
+  display: flex;
+  align-items: center;
+  font-weight: ${props => props.bold && "bold"}
+  justify-content: center;
+  padding: 1em;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #dcdcdc;
+  }
+`
