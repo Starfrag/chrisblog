@@ -4,6 +4,7 @@ import FormAddAssos from './FormAddAssos'
 import FormAddUser from './FormAddUser'
 import Landing from './Landing'
 import Search from './Search'
+import NotFound from './NotFound'
 
 export {
     Admin,
@@ -11,5 +12,6 @@ export {
     FormAddAssos,
     FormAddUser,
     Landing,
-    Search
+    Search,
+    NotFound
 }
