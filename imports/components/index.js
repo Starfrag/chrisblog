@@ -4,6 +4,7 @@ import FormContentAddAssos from './FormContentAddAssos'
 import FormContentAddUser from './FormContentAddUser'
 import HeaderLanding from './HeaderLanding'
 import Navbar from './Navbar'
+import PostForm from './PostForm'
 
 export {
     ContentLanding,
@@ -11,5 +12,6 @@ export {
     FormContentAddAssos,
     FormContentAddUser,
     HeaderLanding,
-    Navbar
+    Navbar,
+    PostForm
 }

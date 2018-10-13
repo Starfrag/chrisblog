@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { PostForm } from '/imports/components'
+import { Container } from 'semantic-ui-react'
 
 export default class Search extends Component {
 
@@ -10,7 +12,10 @@ export default class Search extends Component {
 
         return (
             <div>
-                <p>SEARCH</p>
+                <Container>
+                    <h1>Dans l'attente de la fin du site, un formulaire pour créer des posts ! Batard !</h1>
+                    <PostForm />
+                </Container>
             </div>
         )
     }
