@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import Navbar from '/imports/components/Navbar'
-import HeaderForm from '/imports/components/HeaderForm'
-import FormContentAddUser from '/imports/components/FormContentAddUser'
-import Footer from '/imports/components/Footer'
+import {HeaderForm, FormContentAddUser} from '/imports/components'
 
 export default class FormAddUser extends Component {
 
@@ -14,10 +11,8 @@ export default class FormAddUser extends Component {
 
         return (
             <div>
-                <Navbar />
                 <HeaderForm />
                 <FormContentAddUser />
-                <Footer />
             </div>
         )
     }

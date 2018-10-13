@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import Navbar from '/imports/components/Navbar'
-import Footer from '/imports/components/Footer'
 
 export default class Admin extends Component {
 
@@ -12,8 +10,7 @@ export default class Admin extends Component {
 
         return (
             <div>
-                <Navbar />
-                <Footer />
+                <p>ADMIN</p>
             </div>
         )
     }
