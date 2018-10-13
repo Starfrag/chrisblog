@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Dropdown, Button } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 export default class Navbar extends Component {
 
@@ -15,11 +16,13 @@ export default class Navbar extends Component {
     return (
       <Menu stackable>
 
-        <Menu.Item
-          name='Accueil'
-          active={activeItem === 'Accueil'}
-          onClick={this.handleItemClick}
-        />
+        <Link to="/">
+          <Menu.Item
+            name='Accueil'
+            active={activeItem === 'Accueil'}
+            onClick={this.handleItemClick}
+          />
+        </Link>
 
         {/* TODO - Ajouter handleItemClick sur les sous-menus/Dropdowns */}
 
@@ -30,7 +33,9 @@ export default class Navbar extends Component {
         >
           <Dropdown.Menu>
             <Dropdown.Item>Trouver une association</Dropdown.Item>
-            <Dropdown.Item>Hidden(Ajouter mon association)</Dropdown.Item>
+            <Link to="/assos/add">
+              <Dropdown.Item>Hidden(Ajouter mon association)</Dropdown.Item>
+            </Link>
           </Dropdown.Menu>
         </Dropdown>
 

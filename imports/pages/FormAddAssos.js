@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {HeaderForm, FormContentAddAssos} from '/imports/components'
+import {FormContentAddAssos} from '/imports/components'
 
 export default class FormAddAssos extends Component {
 
@@ -11,7 +11,7 @@ export default class FormAddAssos extends Component {
 
         return (
             <div>
-                <HeaderForm />
+                <h1>Ajouter une association</h1>
                 <FormContentAddAssos />
             </div>
         )
