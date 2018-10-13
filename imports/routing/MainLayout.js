@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Navbar, Footer } from '/imports/components'
-import { Landing } from '/imports/pages'
+import { Landing, Contact } from '/imports/pages'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 export default class MainLayout extends Component {
     state = {
@@ -9,9 +10,14 @@ export default class MainLayout extends Component {
 
     render(){
         return(
-            <div>
+            <div id="main-layout">
                 <Navbar/>
-                    <Landing />
+                    <Router>
+                        <Switch>
+                            <Route exact path="/" component={Landing} />
+                            <Route exact path="/contact" component={Contact} />
+                        </Switch>
+                    </Router>
                 <Footer/>
             </div>
         )
