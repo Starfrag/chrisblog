@@ -4,10 +4,16 @@ body {
 
 // MAIN LAYOUT
 #main-layout{
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    .main-container{
+        min-height: 100vh;
+    }
 }
 
 // Navbar Start
+
 
 .ui.stackable.menu {
     background-color: gray;
@@ -58,15 +64,8 @@ body {
 
 // Footer Start
 
-.footerFluid{
-    color: white;
-    position: relative;
-    bottom: 0;
-    margin-top: 10%;
-    background-color: gray;
-    height: 7vw;
-
-    .rowFooter {
-        margin-top: 10px;
-    }
+#footer {
+    background-color: red;
+    height: 20em;
+    self-align: flex-end;
 }

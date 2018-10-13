@@ -12,12 +12,14 @@ export default class MainLayout extends Component {
         return(
             <div id="main-layout">
                 <Navbar/>
+                <div className="main-container">
                     <Router>
                         <Switch>
                             <Route exact path="/" component={Landing} />
                             <Route exact path="/contact" component={Contact} />
                         </Switch>
                     </Router>
+                </div>
                 <Footer/>
             </div>
         )
