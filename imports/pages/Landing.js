@@ -14,6 +14,7 @@ export default class Landing extends Component {
 
         return (
             <div>
+                {/* Affichage des éléments dans la page d'accueil, avec ordre de présentation (haut en bas) */}
                 <Navbar />
                 <HeaderLanding />
                 <ContentLanding />
